@@ -3,9 +3,18 @@
     margin: 0;
 }
 
+.card {
+    color: white;
+    display: flex;
+    padding: 2%;
+    box-sizing: border-box;
+    height: 88vh;
+    margin: 6vh;
+    border-radius: 40px;
+}
+
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 #red  {
-    color: white;
     background-color: #F99F9F;
     opacity: 40%;
     box-shadow: 0px 0px 20px 6px #F9DCDC;
@@ -14,13 +23,40 @@
     text-align: center;
 }
 
-.card {
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+#blue  {
+    background-color: #35DED6;
+    box-shadow: 0px 0px 20px 6px #DCF8F9;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#icons  {
     display: flex;
-    padding: 2%;
-    box-sizing: border-box;
-    height: 88vh;
-    margin: 6vh;
-    border-radius: 40px;
+    width: 50%;
+    justify-content: space-evenly;
+    margin: auto 0;
+}
+
+#about  {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about p {
+    font-size: 30px;
+}
+
+#about h1 {
+    font-size: 50px;
+}
+
+#about button {
+   margin: 0 auto;
 }
 
 #red nav {
@@ -32,19 +68,19 @@
     width: 5vw;
 }
 
-#red nav button {
+button {
     text-decoration: none;
     color: white;
     background-color: transparent;
     font-size: 20px;
-    height: 58px;
+    height: 44px;
     width: 260px;
-    padding: 0% 2%;
+    /* padding: 0% 2%; */
     border: 1px solid white;
     border-radius: 30px;
 }
 
-#pijl svg{
+svg{
     width: 70px;
     height: 70px;
 }
@@ -53,3 +89,9 @@
 #pijl svg path{
     stroke: white;
 }
+
+/* https://pretagteam.com/question/changing-svg-image-color-with-javascript */
+#icons svg path{
+    fill: white;
+}
+
