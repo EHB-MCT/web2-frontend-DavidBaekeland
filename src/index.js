@@ -6,7 +6,7 @@ async function getData()  {
 
 async function showPijl()  {
     let pijl = await getData();
-    document.getElementById("test").insertAdjacentHTML("beforeend", pijl);
+    document.getElementById("pijl").insertAdjacentHTML("beforeend", pijl);
 }
 
 showPijl();
