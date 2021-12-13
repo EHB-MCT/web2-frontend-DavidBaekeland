@@ -55,13 +55,18 @@
     font-size: 50px;
 }
 
-#about button {
-   margin: 0 auto;
+#about a {
+    margin: 0 auto;
+   text-align: center;
 }
 
 #red nav {
     display: flex;
     justify-content: space-between;
+}
+
+#red nav a {
+    margin:  auto 0;
 }
 
 #red nav img {
@@ -132,8 +137,9 @@ a {
     color: white;
     background-color: transparent;
     font-size: 20px;
-    height: 44px;
-    width: 260px;
+    /* height: 44px;
+    width: 260px; */
+    padding: 6px 110px;
     border: 1px solid white;
     border-radius: 30px;
 }
