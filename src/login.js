@@ -1,10 +1,13 @@
 async function getUser(user)  {
-    console.log(user.email);
+    console.log(user);
     let resp = await fetch(`http://localhost:8080/user`, {
-        method: "post",
-        body: user
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
     });
-    return await resp.text();
+    return await resp.json();
 }
 
 
@@ -13,15 +16,16 @@ async function showUser(e)  {
     console.log(e);
 
 
-    let user = JSON.stringify({
+    let user = {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value
-    })
+    }
 
    
-    console.log(user)
     let userData = await getUser(user);
-    console.log(userData)
+    console.log(userData._id)
+    localStorage.setItem("id", userData._id)
+    console.log(localStorage.id)
 }
 
 window.onload = init;
