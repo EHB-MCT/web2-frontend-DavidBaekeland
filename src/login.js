@@ -25,7 +25,6 @@ async function showUser(e)  {
     let userData = await getUser(user);
     console.log(userData._id)
     localStorage.setItem("id", userData._id)
-    console.log(localStorage.id)
 }
 
 window.onload = init;
