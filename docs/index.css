@@ -13,6 +13,11 @@
     border-radius: 40px;
 }
 
+#test  {
+    border: red;
+    padding: 0;
+}
+
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 #red  {
     background-color: #F99F9F;

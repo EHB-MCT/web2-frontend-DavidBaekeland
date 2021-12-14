@@ -1,12 +1,13 @@
 async function getData(icon)  {
-    let resp = await fetch(`http://localhost:8080/icons/${icon}`);
+    let resp = await fetch(`https://web2-backend-davidbaekeland.herokuapp.com/icons/${icon}`);
     return await resp.text();
 }
 
 
 async function showPijl()  {
     let pijl = await getData("pijl");
-    document.getElementById("pijl").insertAdjacentHTML("beforeend", pijl);
+    let html = `<a id="test" href="#blue">${pijl}</a>`
+    document.getElementById("pijl").insertAdjacentHTML("beforeend", html);
 }
 
 async function showMoney()  {
