@@ -1,11 +1,16 @@
 // npx webpack: normaal automatich -> ook aanpassen
+// https://webpack.js.org/concepts/output/#multiple-entry-points
+
 
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    login: './src/login.js'
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'docs'),
   },
   mode: 'production',
