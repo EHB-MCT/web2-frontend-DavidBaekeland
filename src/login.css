@@ -1,0 +1,19 @@
+* {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+#login {
+    color: #35DED6;
+    display: flex;
+    padding: 2%;
+    width: 70vw;
+    height: 81vh;
+    margin: 5vh auto;
+    border-radius: 40px;
+    box-shadow: 0px 0px 30px 10px #DCF8F9;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
