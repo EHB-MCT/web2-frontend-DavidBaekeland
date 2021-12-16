@@ -44,6 +44,10 @@ async function showUser(e)  {
         document.getElementById("account").setAttribute('id','accountActive');
         let html = `<a id="logout" href="">${logout}</a>`
         document.getElementsByTagName("nav")[0].insertAdjacentHTML("beforeend", html);
+
+        let plus = await getIcon("plus");
+        let plus2 = `<a id="logout" href="">${plus}</a>`
+        document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
     } else  {
         document.getElementById("wrongInput").innerText = userData.err;
     }

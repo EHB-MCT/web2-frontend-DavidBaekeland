@@ -7,15 +7,50 @@
 #login {
     color: #35DED6;
     display: flex;
-    padding: 2%;
+    padding: 5%;
     width: 70vw;
-    height: 81vh;
+    height: 90vh;
     margin: 5vh auto;
     border-radius: 40px;
     box-shadow: 0px 0px 30px 10px #DCF8F9;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    box-sizing: border-box;
+}
+
+#login div {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="submit"] {
+    text-decoration: none;
+    color: #35DED6;
+    background-color: transparent;
+    font-size: 2em;
+    padding: 6px 110px;
+    border: 1px solid #35DED6;
+    border-radius: 30px;
+}
+
+#submit a {
+    text-decoration: none;
+    color: #35DED6;
+    margin-bottom: 3%;
+}
+
+input[type="email"], input[type="password"]  {
+    font-size: 1.4em;
+    border: 1px solid #35DED6;
+    border-radius: 30px;
+}
+
+
+#login label  {
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 2vh;
 }
 
 #login2 {
@@ -29,32 +64,50 @@
 
 #accountActive {
     display: flex;
-    width: 100vw;
-
+    /* width: 100vw; */
     justify-content: space-between;
-    
+    flex-direction: column;
+    margin: 7vh;
+}
+
+#questions div  {
+    display: flex;
+    justify-content: space-between
 }
 
 #accountActive nav img, #accountActive nav svg {
-    width: 7vw;
+    height: 10vh;
+}
+
+#accountActive nav svg {
+    width: 3vw;
+}
+
+#addQuestions {
+    color: #35DED6;
+}
+
+#addQuestions svg path {
+    fill: #35DED6;
 }
 
 #accountActive nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: sandybrown;
+    /* background-color: sandybrown; */
     width: 100%;
     padding: 2%;
+    box-sizing: border-box;
 }
 
 #wrongInput  {
     color: red;
 }
 
-#accountActive nav svg {
+/* #accountActive nav svg {
     height: 7vh;
-}
+} */
 
 /* https://pretagteam.com/question/changing-svg-image-color-with-javascript */
 #accountActive nav svg path{
