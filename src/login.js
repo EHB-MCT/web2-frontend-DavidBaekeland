@@ -34,10 +34,10 @@ async function showUser(e)  {
    
    
     let userData = await getUser(user);
-    console.log(userData.err);
+    // console.log(userData);
     
     let logout = await getIcon("logout");
-    console.log(logout);
+    // console.log(logout);
 
     if(!userData.err)  {
         document.getElementById("login").setAttribute('id','login2');
@@ -45,15 +45,39 @@ async function showUser(e)  {
         let html = `<a id="logout" href="">${logout}</a>`
         document.getElementsByTagName("nav")[0].insertAdjacentHTML("beforeend", html);
 
-        let plus = await getIcon("plus");
-        let plus2 = `<a id="logout" href="">${plus}</a>`
-        document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
+        account(userData)
+
+        // console.log(userData.question)
     } else  {
         document.getElementById("wrongInput").innerText = userData.err;
     }
     
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+// index => array[i]
+async function account(userData) {
+    let plus = await getIcon("plus");
+    let plus2 = `<a id="logout" href="">${plus}</a>`
+    document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
+
+    userData.question.forEach((question, index) => {
+        // oneven plaats => even index => rood 
+        let html = "";
+        if(index % 2 == 0)  {
+            console.log(question);
+            html = `<div class="red">
+            <p>${question}</p>
+            </div>`
+        }  else  {
+            html = `<div class="blue">
+            <p>${question}</p>
+            </div>`
+        }
+        
+    document.getElementById("questions").insertAdjacentHTML("beforeend", html);
+    })
+}
 
 
 window.onload = init;
