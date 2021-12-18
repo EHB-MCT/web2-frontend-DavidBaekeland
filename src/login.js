@@ -1,6 +1,6 @@
 async function getUser(user)  {
     console.log(user);
-    let resp = await fetch(`http://localhost:8080/user`, {
+    let resp = await fetch(`https://web2-backend-davidbaekeland.herokuapp.com/user`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -12,7 +12,7 @@ async function getUser(user)  {
 
 async function getIcon(icon)  {
     console.log(icon);
-    let resp = await fetch(`http://localhost:8080/icons/${icon}`);
+    let resp = await fetch(`https://web2-backend-davidbaekeland.herokuapp.com/icons/${icon}`);
     return await resp.text();
 }
 
@@ -61,17 +61,17 @@ async function account(userData) {
     let plus2 = `<a id="logout" href="">${plus}</a>`
     document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
 
-    userData.question.forEach((question, index) => {
+    userData.question.forEach((questions, index) => {
         // oneven plaats => even index => rood 
         let html = "";
         if(index % 2 == 0)  {
-            console.log(question);
-            html = `<div class="red">
-            <p>${question}</p>
+            console.log(questions);
+            html = `<div class="red card">
+            <p>${questions}</p>
             </div>`
         }  else  {
-            html = `<div class="blue">
-            <p>${question}</p>
+            html = `<div class="blue card">
+            <p>${questions}</p>
             </div>`
         }
         
