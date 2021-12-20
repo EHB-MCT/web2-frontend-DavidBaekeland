@@ -40,11 +40,14 @@ input[type="submit"] {
     margin-bottom: 3%;
 }
 
-input[type="text"]  {
-    font-size: 1.4em;
+/* https://stackoverflow.com/questions/5235142/how-do-i-disable-the-resizable-property-of-a-textarea */
+textarea  {
+    /* font-size: 1.4em; */
     height: 50vh;
     border: 1px solid #35DED6;
     border-radius: 30px;
+    resize: none;
+    padding: 4vh;
 }
 
 #questionForm label  {
