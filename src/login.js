@@ -34,12 +34,18 @@ async function showUser(e)  {
    
    
     let userData = await getUser(user);
-    // console.log(userData);
+    console.log(userData.question);
     
     let logout = await getIcon("logout");
     // console.log(logout);
 
     if(!userData.err)  {
+        // console.log("dqsfsqsdf" + userData)
+        localStorage.setItem("id", userData._id);
+        //https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage
+        // array als json anders kan gewoob tekst
+        localStorage.setItem("questions", JSON.stringify(userData.question));
+        // console.log(localStorage.id)
         document.getElementById("login").setAttribute('id','login2');
         document.getElementById("account").setAttribute('id','accountActive');
         let html = `<a id="logout" href="">${logout}</a>`
@@ -58,7 +64,8 @@ async function showUser(e)  {
 // index => array[i]
 async function account(userData) {
     let plus = await getIcon("plus");
-    let plus2 = `<a id="logout" href="">${plus}</a>`
+    // login omgevormd naar in docs login.js -> quesstion.js
+    let plus2 = `<a id="plusQuestion" href="../questions.html">${plus}</a>`
     document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
 
     userData.question.forEach((questions, index) => {
