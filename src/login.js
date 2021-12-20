@@ -19,19 +19,24 @@ async function getIcon(icon)  {
 
 // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_loc_replace
 
-async function showUser(e)  {
-    e.preventDefault();
-    console.log(e);
+async function showUser()  {
+    // console.log(e);
 
 
+    let user;
 
-    // https://stackoverflow.com/questions/7077770/window-location-href-and-window-open-methods-in-javascript
-    let user = {
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
+    if(localStorage.getItem("id"))  {
+        user = {
+          id: localStorage.getItem("id")
+        };
+    } else  {
+        user = {
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value
+        }
     }
 
-   
+    // https://stackoverflow.com/questions/7077770/window-location-href-and-window-open-methods-in-javascript
    
     let userData = await getUser(user);
     console.log(userData.question);
@@ -48,7 +53,7 @@ async function showUser(e)  {
         // console.log(localStorage.id)
         document.getElementById("login").setAttribute('id','login2');
         document.getElementById("account").setAttribute('id','accountActive');
-        let html = `<a id="logout" href="">${logout}</a>`
+        let html = `<a id="logout">${logout}</a>`
         document.getElementsByTagName("nav")[0].insertAdjacentHTML("beforeend", html);
 
         account(userData)
@@ -68,6 +73,18 @@ async function account(userData) {
     let plus2 = `<a id="plusQuestion" href="../questions.html">${plus}</a>`
     document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
 
+    document.getElementById("logout").addEventListener("click", e =>  {
+        e.preventDefault()
+        console.log("d")
+        localStorage.removeItem("id");
+        // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
+        location.href = "login.html";
+    })
+
+    // Mike Deryke => WebII => S2 => script.js
+    // userData.question.sort((a,b) => {
+    //     return a-b;
+    // })
     userData.question.forEach((questions, index) => {
         // oneven plaats => even index => rood 
         let html = "";
@@ -84,6 +101,9 @@ async function account(userData) {
         
     document.getElementById("questions").insertAdjacentHTML("beforeend", html);
     })
+
+
+    
 }
 
 
@@ -91,5 +111,12 @@ window.onload = init;
 
 //Dev II
 function init()  {
-    document.getElementById("login").addEventListener("submit", (e) => {showUser(e)})
+    if(localStorage.getItem("id")) {
+        showUser()
+    } else {
+        document.getElementById("login").addEventListener("submit", (e) => {
+            e.preventDefault();
+            showUser()
+        })
+    }
 }
