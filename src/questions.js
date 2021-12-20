@@ -1,8 +1,9 @@
-window.onload = () => {
+window.onload = async() => {
     let questions = JSON.parse(localStorage.questions);
-    document.getElementById("questionForm").addEventListener("submit", e => {
+    document.getElementById("questionForm").addEventListener("submit", async(e) => {
         e.preventDefault();
         let newQuestion = document.getElementById("question").value;
+        console.log(newQuestion)
         questions.push(newQuestion)
         console.log(questions)
 
@@ -14,7 +15,10 @@ window.onload = () => {
             "setQuestions": questions
         }
 
-        let test = putQuestions(question)
+        let test = await putQuestions(question)
+
+        // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
+        location.href = "assets/login.html";
     })
     
     //console.log(questions[2]);
