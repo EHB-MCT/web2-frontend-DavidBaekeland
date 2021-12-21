@@ -116,6 +116,7 @@ async function account(userData) {
 
 function logout() {
     localStorage.removeItem("id");
+    localStorage.removeItem("questions");
         // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
         location.href = "login.html";
 }
@@ -132,6 +133,11 @@ window.onload = init;
 
 //Dev II
 function init()  {
+    document.getElementById("newAccount").addEventListener("click", () => {
+        // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
+        location.href = "../newAccount.html";
+    })
+
     if(localStorage.getItem("id")) {
         showUser()
     } else {
