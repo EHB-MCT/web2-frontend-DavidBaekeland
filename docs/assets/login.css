@@ -4,7 +4,7 @@
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
-#login {
+#login, #newAccountForm {
     color: #35DED6;
     display: flex;
     padding: 5%;
@@ -19,7 +19,7 @@
     box-sizing: border-box;
 }
 
-#login div {
+#login div, #newAccountForm div {
     display: flex;
     flex-direction: column;
 }
@@ -40,14 +40,14 @@ input[type="submit"] {
     margin-bottom: 3%;
 }
 
-input[type="email"], input[type="password"]  {
+input[type="email"], input[type="password"], input[type="text"]   {
     font-size: 1.4em;
     border: 1px solid #35DED6;
     border-radius: 30px;
 }
 
 
-#login label  {
+#login label, #newAccount label  {
     text-align: left;
     font-size: 2em;
     margin-bottom: 2vh;
