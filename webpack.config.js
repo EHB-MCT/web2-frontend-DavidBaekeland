@@ -8,7 +8,8 @@ module.exports = {
   entry: {
     main: './src/index.js',
     login: './src/login.js',
-    questions: './src/questions.js'
+    questions: './src/questions.js',
+    newAccount: './src/newAccount.js'
   },
   output: {
     filename: '[name].js',
