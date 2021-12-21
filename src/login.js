@@ -10,6 +10,14 @@ async function getUser(user)  {
     return await resp.json();
 }
 
+async function deleteUser(user)  {
+    console.log(user);
+    let resp = await fetch(`https://web2-backend-davidbaekeland.herokuapp.com/users/${user}`, {
+        method: "DELETE",
+    });
+    return await resp.text();
+}
+
 async function getIcon(icon)  {
     console.log(icon);
     let resp = await fetch(`https://web2-backend-davidbaekeland.herokuapp.com/icons/${icon}`);
@@ -74,17 +82,11 @@ async function account(userData) {
     document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
 
     document.getElementById("logout").addEventListener("click", e =>  {
-        e.preventDefault()
-        console.log("d")
-        localStorage.removeItem("id");
-        // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
-        location.href = "login.html";
+        e.preventDefault();
+        console.log("d");
+        logout();
     })
 
-    // Mike Deryke => WebII => S2 => script.js
-    // userData.question.sort((a,b) => {
-    //     return a-b;
-    // })
     userData.question.forEach((questions, index) => {
         // oneven plaats => even index => rood 
         let html = "";
@@ -102,9 +104,28 @@ async function account(userData) {
     document.getElementById("questions").insertAdjacentHTML("beforeend", html);
     })
 
+    let deleteButton = `<a id="delete">Delete Account</a>`
+    document.getElementById("questions").insertAdjacentHTML("beforeend", deleteButton);
 
-    
+
+    document.getElementById("delete").addEventListener("click", e => {
+        e.preventDefault();
+        deleteAccount();
+    })
 }
+
+function logout() {
+    localStorage.removeItem("id");
+        // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
+        location.href = "login.html";
+}
+
+
+async function deleteAccount()  {
+    let deleteAccount = await deleteUser(localStorage.getItem("id"));
+    logout();
+}
+
 
 
 window.onload = init;

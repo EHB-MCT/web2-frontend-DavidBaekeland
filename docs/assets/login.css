@@ -124,6 +124,18 @@ a {
     margin: auto 0;
 }
 
+#delete {
+    text-decoration: none;
+    color: #FF0000;
+    background-color: transparent;
+    font-size: 20px;
+    /* height: 44px;
+    width: 260px; */
+    padding: 6px 110px;
+    border: 1px solid #FF0000;
+    border-radius: 30px;
+}
+
 input  {
     padding: 1.1% 3%;
 }
