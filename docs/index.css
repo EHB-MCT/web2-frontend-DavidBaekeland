@@ -29,7 +29,7 @@ a {
 }
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 #red  {
-    background-color: #F99F9F;
+    background-color: #FE3E3E;
     box-shadow: 0px 0px 20px 6px #F9DCDC;
     flex-direction: column;
     justify-content: space-between;
