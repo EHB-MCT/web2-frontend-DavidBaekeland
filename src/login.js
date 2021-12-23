@@ -50,7 +50,10 @@ async function showUser()  {
     console.log(userData.question);
     
     let logout = await getIcon("logout");
-    // console.log(logout);
+
+   
+
+
 
     if(!userData.err)  {
         // console.log("dqsfsqsdf" + userData)
@@ -87,6 +90,8 @@ async function account(userData) {
         logout();
     })
 
+    let procces = await getIcon("refresh");
+
     userData.question.forEach((questions, index) => {
         // oneven plaats => even index => rood 
         let html = "";
@@ -94,10 +99,12 @@ async function account(userData) {
             console.log(questions);
             html = `<div class="red card">
             <p>${questions}</p>
+            ${procces}
             </div>`
         }  else  {
             html = `<div class="blue card">
             <p>${questions}</p>
+            ${procces}
             </div>`
         }
         

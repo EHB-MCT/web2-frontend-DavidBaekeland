@@ -71,6 +71,7 @@ input[type="email"], input[type="password"], input[type="text"]   {
 
 #questions div  {
     display: flex;
+    flex-direction: row;
     justify-content: space-between
 }
 
@@ -134,6 +135,18 @@ a {
 
 #questions{
     text-align: center;
+}
+
+
+#questions svg{
+    display: flex;
+    justify-content: center;
+    fill: #fff;
+}
+
+#questions svg path{
+    fill: #fff;
+    width: 20%;
 }
 
 #delete:hover {
