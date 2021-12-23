@@ -141,10 +141,9 @@ a {
 #questions svg{
     display: flex;
     justify-content: center;
-    fill: #fff;
 }
 
-#questions svg path{
+#questions .card svg path{
     fill: #fff;
     width: 20%;
 }
