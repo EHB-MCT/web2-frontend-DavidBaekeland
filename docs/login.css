@@ -64,7 +64,6 @@ input[type="email"], input[type="password"], input[type="text"]   {
 
 #accountActive {
     display: flex;
-    /* width: 100vw; */
     justify-content: space-between;
     flex-direction: column;
     margin: 7vh;
@@ -89,7 +88,6 @@ input[type="email"], input[type="password"], input[type="text"]   {
 
 #addQuestions svg path {
     fill: #35DED6;
-    /* height: 3vh; */
 }
 
 #logout svg {
@@ -108,12 +106,8 @@ input[type="email"], input[type="password"], input[type="text"]   {
 }
 
 #wrongInput  {
-    color: red;
+    color: rgb(255, 0, 0);
 }
-
-/* #accountActive nav svg {
-    height: 7vh;
-} */
 
 /* https://pretagteam.com/question/changing-svg-image-color-with-javascript */
 #accountActive nav svg path{
@@ -129,11 +123,25 @@ a {
     color: #FF0000;
     background-color: transparent;
     font-size: 20px;
-    /* height: 44px;
-    width: 260px; */
     padding: 6px 110px;
     border: 1px solid #FF0000;
     border-radius: 30px;
+    display: flex;
+    width: 15vw;
+    justify-content: center;
+    margin: 10vh auto;
+}
+
+#questions{
+    text-align: center;
+}
+
+#delete:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF0000;
+    box-shadow: 0px 0px 30px 0px #ff00008f;
+    border: 1px solid #FF0000;
 }
 
 input  {
@@ -146,7 +154,6 @@ input  {
     display: flex;
     padding: 4%;
     box-sizing: border-box;
-    /* height: 10vh; */
     margin: 2% 0;
     border-radius: 30px;
     flex-direction: column;
@@ -155,12 +162,13 @@ input  {
 
 .card p {
     width: 50%;
+    text-align: left;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 .red  {
-    background-color: #F99F9F;
-    box-shadow: 0px 0px 20px 6px #F9DCDC;
+    background-color: #FE3E3E;
+    box-shadow: 0px 0px 30px 0px #ff00008f;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
