@@ -1,7 +1,7 @@
 window.onload = () =>  {
     document.getElementById("oldAccount").addEventListener("click", () => {
         // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
-        location.href = "assets/login.html";
+        location.href = "login.html";
     })
 
     document.getElementById("newAccountForm").addEventListener("submit", async(e)  =>  {
@@ -21,7 +21,7 @@ window.onload = () =>  {
             console.log(newUser.insertedId);
 
             // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
-            location.href = "assets/login.html";
+            location.href = "login.html";
         }  else  {
             document.getElementById("wrongInput").innerText = "De wachtwoorden zijn niet hetzelfde";
         }

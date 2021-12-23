@@ -19,7 +19,7 @@ window.onload = async() => {
         let test = await putQuestions(question)
 
         // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
-        location.href = "assets/login.html";
+        location.href = "login.html";
     })
     
     //console.log(questions[2]);
