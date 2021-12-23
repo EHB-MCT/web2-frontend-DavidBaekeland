@@ -78,7 +78,7 @@ async function showUser()  {
 async function account(userData) {
     let plus = await getIcon("plus");
     // login omgevormd naar in docs login.js -> quesstion.js
-    let plus2 = `<a id="plusQuestion" href="../questions.html">${plus}</a>`
+    let plus2 = `<a id="plusQuestion" href="questions.html">${plus}</a>`
     document.getElementById("addQuestions").insertAdjacentHTML("beforeend", plus2);
 
     document.getElementById("logout").addEventListener("click", e =>  {
@@ -135,7 +135,7 @@ window.onload = init;
 function init()  {
     document.getElementById("newAccount").addEventListener("click", () => {
         // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
-        location.href = "../newAccount.html";
+        location.href = "newAccount.html";
     })
 
     if(localStorage.getItem("id")) {
