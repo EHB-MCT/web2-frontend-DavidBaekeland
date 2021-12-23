@@ -6,7 +6,7 @@ async function getData(icon)  {
 
 async function showPijl()  {
     let pijl = await getData("pijl");
-    let html = `<a id="test" href="#blue">${pijl}</a>`
+    let html = `<a id="pijl2" href="#blue">${pijl}</a>`
     document.getElementById("pijl").insertAdjacentHTML("beforeend", html);
 }
 
