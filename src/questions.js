@@ -22,8 +22,6 @@ window.onload = async() => {
         location.href = "login.html";
     })
     
-    //console.log(questions[2]);
-    
     
     
     async function putQuestions(question)  {

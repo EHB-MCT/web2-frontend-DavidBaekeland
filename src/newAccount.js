@@ -1,4 +1,5 @@
 window.onload = () =>  {
+    // Already an account
     document.getElementById("oldAccount").addEventListener("click", () => {
         // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
         location.href = "login.html";
@@ -6,8 +7,6 @@ window.onload = () =>  {
 
     document.getElementById("newAccountForm").addEventListener("submit", async(e)  =>  {
         e.preventDefault();
-
-        console.log(document.getElementById("password").value, document.getElementById("repeatPassword").value)
 
         if(document.getElementById("password").value == document.getElementById("repeatPassword").value)  {
             let user = {
@@ -18,7 +17,6 @@ window.onload = () =>  {
 
             let newUser = await postUser(user);
             localStorage.setItem("id", newUser.insertedId)
-            console.log(newUser.insertedId);
 
             // https://www.codegrepper.com/code-examples/javascript/forward+to+new+page+onclick+js
             location.href = "login.html";
