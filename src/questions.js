@@ -4,7 +4,8 @@ window.onload = async() => {
         e.preventDefault();
         let newQuestion = document.getElementById("question").value;
         console.log(newQuestion)
-        questions.push(newQuestion)
+        // https://stackoverflow.com/questions/8073673/how-can-i-add-new-array-elements-at-the-beginning-of-an-array-in-javascript
+        questions.unshift(newQuestion)
         console.log(questions)
 
 
