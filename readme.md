@@ -36,7 +36,7 @@ https://color.adobe.com/nl/create/color-wheel
 https://www.w3schools.com/colors/colors_picker.asp
 https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element
 https://stackoverflow.com/questions/14792574/css-child-set-to-change-color-on-parent-hover-but-changes-also-when-hovered
-https://css-tricks.com/change-color-of-svg-on-hover/
+
 
 ### IMG Overflow
 https://www.w3schools.com/cssref/pr_pos_overflow.asp
@@ -61,7 +61,7 @@ https://www.behance.net/
 
 https://www.behance.net/collection/188523809/WEB-II?tracking_source=undefined
 
-https://xd.adobe.com/view/684e4063-e354-4c52-9cce-f13e361794f3-3d1d/
+https://xd.adobe.com/view/3d24aa3f-299b-4749-b787-1558aa1743ff-6877/
 
 
 
